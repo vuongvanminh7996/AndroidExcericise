@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/aussie_style_beef_and_salad_tacos_86525_1" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="@font/aclonica"
+            android:text="LocoTaco"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="#FF0000"
+            android:textSize="36sp"
+            android:textStyle="bold|italic" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/averia_libre_light"
+            android:gravity="center_horizontal"
+            android:text="Size"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/averia_libre_light"
+            android:gravity="center_horizontal"
+            android:text="Tortilla"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        tools:layout_editor_absoluteX="2dp">
+
+        <RadioGroup
+            android:id="@+id/Size"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/sizeMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Medium"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/sizeLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Large"
+                android:textSize="18sp" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/Tortilla"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/tortillaCorn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Corn"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:id="@+id/tortillaFlour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Flour"
+                android:textSize="18sp" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6"
+        tools:layout_editor_absoluteX="2dp">
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/averia_libre_light"
+            android:gravity="center_horizontal"
+            android:text="Filling"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7"
+        tools:layout_editor_absoluteX="2dp">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/Filling"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:checkedChip="@id/fillingCheese"
+            app:chipSpacing="8dp"
+            app:singleLine="false"
+            app:singleSelection="false">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/Beef"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:fontFamily="@font/averia_libre_light"
+                android:text="Beef"
+                android:textSize="18sp"
+                app:checkedIconVisible="false"
+                app:closeIconVisible="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/Chicken"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:fontFamily="@font/averia_libre_light"
+                android:text="Chicken"
+                android:textSize="18sp"
+                app:checkedIconVisible="false"
+                app:closeIconVisible="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/fillingWhiteFish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:fontFamily="@font/averia_libre_light"
+                android:text="White Fish"
+                android:textSize="18sp"
+                app:checkedIconVisible="false"
+                app:closeIconVisible="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/fillingCheese"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:fontFamily="@font/averia_libre_light"
+                android:text="Cheese"
+                android:textSize="18sp"
+                app:checkedIconVisible="false"
+                app:closeIconVisible="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/fillingSeaFood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:fontFamily="@font/averia_libre_light"
+                android:text="Sea Food"
+                android:textSize="18sp"
+                app:checkedIconVisible="false"
+                app:closeIconVisible="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/fillingRice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:fontFamily="@font/averia_libre_light"
+                android:text="Rice"
+                android:textSize="18sp"
+                app:checkedIconVisible="false"
+                app:closeIconVisible="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:fontFamily="@font/averia_libre_light"
+                android:text="Beans"
+                android:textSize="18sp"
+                app:checkedIconVisible="false"
+                app:closeIconVisible="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip22"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:fontFamily="@font/averia_libre_light"
+                android:text="Pico de Gallo"
+                android:textSize="18sp"
+                app:checkedIconVisible="false"
+                app:closeIconVisible="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:fontFamily="@font/averia_libre_light"
+                android:text="Guacamole"
+                android:textSize="18sp"
+                app:checkedIconVisible="false"
+                app:closeIconVisible="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:fontFamily="@font/averia_libre_light"
+                android:text="LBT"
+                android:textSize="18sp"
+                app:checkedIconVisible="false"
+                app:closeIconVisible="false" />
+
+        </com.google.android.material.chip.ChipGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout9"
+        tools:layout_editor_absoluteX="2dp">
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/averia_libre_light"
+            android:gravity="center_horizontal"
+            android:text="Beverage"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout10"
+        tools:layout_editor_absoluteX="2dp">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/Beverage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:checkedChip="@id/fillingCheese"
+            app:chipSpacing="8dp"
+            app:singleLine="false"
+            app:singleSelection="false">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:fontFamily="@font/averia_libre_light"
+                android:text="Soda"
+                android:textSize="18sp"
+                app:checkedIconVisible="false"
+                app:chipIconVisible="false"
+                app:closeIconVisible="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:fontFamily="@font/averia_libre_light"
+                android:text="Cerveza"
+                android:textSize="18sp"
+                app:checkedIconVisible="false"
+                app:chipIconVisible="false"
+                app:closeIconVisible="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip29"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:fontFamily="@font/averia_libre_light"
+                android:text="Magarita"
+                android:textSize="18sp"
+                app:checkedIconVisible="false"
+                app:chipIconVisible="false"
+                app:closeIconVisible="false" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="true"
+                android:fontFamily="@font/averia_libre_light"
+                android:text="Tequila"
+                android:textSize="18sp"
+                app:checkedIconVisible="false"
+                app:chipIconVisible="false"
+                app:closeIconVisible="false" />
+        </com.google.android.material.chip.ChipGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constrainedHeight="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout11">
+
+        <Button
+            android:id="@+id/ButtonWebView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Description"
+            android:textColor="#000000"
+            app:backgroundTint="#2196F3" />
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="#009688"
+            android:text="Order"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/Location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textColor="#000000"
+            app:backgroundTint="#FFC107" />
+
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout3"
+        tools:visibility="invisible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
